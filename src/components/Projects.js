@@ -3,12 +3,13 @@ import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/bmsel.png";
 import projImg2 from "../assets/img/eduBuddy.png";
 import projImg3 from "../assets/img/sms.png";
+import trinetraImg from "../assets/img/trinetra-img2.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 
 export const Projects = () => {
-  const projects = [
+  const webprojects = [
     {
       title: "BMS-EL",
       description:
@@ -29,6 +30,26 @@ export const Projects = () => {
         "Student Management System is a web application for efficiently managing student records, and staff details with seamless CRUD operations.",
       imgUrl: projImg3,
       link: "https://github.com/abhuvan345/Student-Management-System", // Replace with actual URL
+    },
+  ];
+
+  const activeprojects = [
+    {
+      title: "Trinetra",
+      description:
+        "Trinetra is an AI health app that diagnoses symptoms, suggests remedies, and helps book doctor appointments.",
+      imgUrl: trinetraImg,
+      link: "https://trinetra2.netlify.app/", // Replace with actual URL
+    },
+  ];
+
+    const appprojects = [
+    {
+      title: "FoodGo",
+      description:
+        "Trinetra is an AI health app that diagnoses symptoms, suggests remedies, and helps book doctor appointments.",
+      imgUrl: trinetraImg,
+      link: "https://trinetra2.netlify.app/", // Replace with actual URL
     },
   ];
 
@@ -64,7 +85,7 @@ export const Projects = () => {
                         <Nav.Link eventKey="second">App Development</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="third">Others</Nav.Link>
+                        <Nav.Link eventKey="third">Active project</Nav.Link>
                       </Nav.Item>
                     </Nav>
                     <Tab.Content
@@ -75,7 +96,7 @@ export const Projects = () => {
                     >
                       <Tab.Pane eventKey="first">
                         <Row>
-                          {projects.map((project, index) => {
+                          {webprojects.map((project, index) => {
                             return <ProjectCard key={index} {...project} />;
                           })}
                         </Row>
@@ -84,7 +105,11 @@ export const Projects = () => {
                         <p>"Coming Soon !!!"</p>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                        <p>"Coming Soon !!!"</p>
+                        <Row>
+                          {activeprojects.map((project, index) => {
+                            return <ProjectCard key={index} {...project} />;
+                          })}
+                        </Row>
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
