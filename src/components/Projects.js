@@ -3,6 +3,8 @@ import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/bmsel.png";
 import projImg2 from "../assets/img/eduBuddy.png";
 import projImg3 from "../assets/img/sms.png";
+import projImg4 from "../assets/img/crypto_proj.png";
+import projImg5 from "../assets/img/usp.png";
 import trinetraImg from "../assets/img/trinetra-img2.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
@@ -31,6 +33,20 @@ export const Projects = () => {
       imgUrl: projImg3,
       link: "https://github.com/abhuvan345/Student-Management-System", // Replace with actual URL
     },
+    {
+      title: "Image Encryption System",
+      description:
+        "Crypto Image Encryption tool in React JS using Blowfish to securely encrypt and decrypt image files. A simple yet powerful step into cybersecurity and data privacy!",
+      imgUrl: projImg4,
+      link: "https://cryptoblowfish.netlify.app/", // Replace with actual URL
+    },
+    {
+      title: "Student Enrollment System",
+      description:
+        "A terminal-based Student Enrollment System on Ubuntu using Bash and Python. It handles student data, generates QR-coded ID cards, and sends confirmation emails",
+      imgUrl: projImg5,
+      link: "https://github.com/abhuvan345/USP_Project", // Replace with actual URL
+    },
   ];
 
   const activeprojects = [
@@ -43,7 +59,7 @@ export const Projects = () => {
     },
   ];
 
-    const appprojects = [
+  const appprojects = [
     {
       title: "FoodGo",
       description:
